@@ -10,11 +10,11 @@ namespace PoductLibrary
     internal class Gadget : Product
     {
         protected string name;
-        public string Name
+        public override string Name
         {
             get
             {
-                return Name;
+                return name;
             }
             set
             {
@@ -24,7 +24,7 @@ namespace PoductLibrary
             }
         }
         protected int price;
-        public int Price
+        public override int Price
         {
             get { return price; }
             set
@@ -35,13 +35,13 @@ namespace PoductLibrary
             }
         }
         protected int count;
-        public int Count
+        public override int Count
         {
             get { return count; }
             set
             {
                 if ((value >= 0))
-                    price = value;
+                    count = value;
                 else throw new Exception("Кількість товару має бути більшою або дорівнювати нулю");
             }
         }
