@@ -28,7 +28,7 @@ namespace PoductLibrary
         }
         public override string Display()
         {
-            return $"Назва овочу: {name}; Сорт: {sort} Ціна за одну одиницю: {price}; Кількість данних овочей на складі: {count};";
+            return $"Назва овочу: {name};\nСорт: {sort};\nЦіна за одну одиницю: {price} UAH;\nКількість одиниць товару: {count};\n";
         }
     }
 }

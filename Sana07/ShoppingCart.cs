@@ -34,7 +34,7 @@ namespace PoductLibrary
             {
                 sum += products[i].Price;
             }
-            return $"Cума всiх продуктiв у кошику: {sum}";
+            return $"Cума всiх продуктiв у кошику: {sum} UAH";
         }
     }
 }

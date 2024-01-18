@@ -27,7 +27,8 @@ namespace PoductLibrary
         }
         public override string Display()
         {
-            return $"Назва товару: {name}; Матеріал з якого виготовлено товар: {material} Ціна товару: {price}; Кількість одиниць товару: {count};";
+            return $"Назва товару: {name};\nМатеріал з якого виготовлено товар: {material};" +
+                $"\nЦіна товару: {price} UAH;\nКількість одиниць товару: {count};\n";
         }
     }
 }
