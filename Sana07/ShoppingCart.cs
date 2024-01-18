@@ -24,7 +24,7 @@ namespace PoductLibrary
         {
             string info = "Список продуктів доданих до кошику:\n";
             for (int i = 0; i < products.Count; i++)
-                info += $"{i + 1}. {products[i].Name}\n";
+                info += $"{i + 1}.\n{products[i].Display()}\n";
             return info;
         }
         public string AllProductsSum()

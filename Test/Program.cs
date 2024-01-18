@@ -8,10 +8,6 @@ Product table = new Furniture("Стiл", "Дерево", 10000, 5);
 Product phone = new Gadget("Iphone 15", 6, 128, 60000, 10);
 ShoppingCart shoppingCart= new ShoppingCart();
 
-Console.WriteLine(cucumber.Display());
-Console.WriteLine(table.Display());
-Console.WriteLine(phone.Display());
-
 shoppingCart.AddProduct(cucumber);
 shoppingCart.AddProduct(table);
 shoppingCart.AddProduct(phone);
