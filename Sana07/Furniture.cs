@@ -7,56 +7,27 @@ using System.Threading.Tasks;
 
 namespace PoductLibrary
 {
-    internal class Fruits : Product
+    public class Furniture : Product
     {
-        protected string name;
-        public string Name
+        protected string material;
+        public string Material
         {
-            get
-            {
-                return Name;
-            }
+            get { return material; }
             set
             {
                 if (value != null)
-                    name = value;
-                else throw new Exception("Введіть назву фрукту");
+                    material = value;
+                else throw new Exception($"Вкажіть з якого матеріалу виготовлено цей виріб: {name}");
             }
         }
-        protected int price;
-        public int Price
+        public Furniture(string name, string material, int price, int count)
+            : base(name,price,count)
         {
-            get
-            {
-                return price;
-            }
-            set
-            {
-                if ((value > 0))
-                    price = value;
-                else throw new Exception("Ціна товару має бути більшою або дорівнювати нулю");
-            }
-        }
-        protected int count;
-        public int Count
-        {
-            get { return count; }
-            set
-            {
-                if ((value > 0))
-                    price = value;
-                else throw new Exception("Кількість товару має бути більшою або дорівнювати нулю");
-            }
-        }
-        public Fruits(string name,int price, int count)
-        {
-            this.name = name;
-            this.price = price;
-            this.count = count;
+            this.material = material;
         }
         public override string Display()
         {
-            return $"Назва товару: {Name}; Ціна товару: {Price}; Кількість одиниць товару: {Count};";
+            return $"Назва товару: {name}; Матеріал з якого виготовлено товар: {material} Ціна товару: {price}; Кількість одиниць товару: {count};";
         }
     }
 }

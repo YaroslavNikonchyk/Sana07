@@ -7,44 +7,8 @@ using System.Threading.Tasks;
 
 namespace PoductLibrary
 {
-    internal class Gadget : Product
+    public class Gadget : Product
     {
-        protected string name;
-        public override string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                if (value != null)
-                    name = value;
-                else throw new Exception("Введіть назву фрукту");
-            }
-        }
-        protected int price;
-        public override int Price
-        {
-            get { return price; }
-            set
-            {
-                if ((value >= 0))
-                    price = value;
-                else throw new Exception("Ціна товару має бути більшою або дорівнювати нулю");
-            }
-        }
-        protected int count;
-        public override int Count
-        {
-            get { return count; }
-            set
-            {
-                if ((value >= 0))
-                    count = value;
-                else throw new Exception("Кількість товару має бути більшою або дорівнювати нулю");
-            }
-        }
         protected int rem;
         public int Rem
         {
@@ -68,13 +32,10 @@ namespace PoductLibrary
             }
         }
         public Gadget(string name, int rem, int memory, int price, int count)
+            : base (name, price,count)
         {
-            this.name = name;
             this.rem = rem;
             this.memory = memory;
-            this.price = price;
-            this.count = count;
-
         }
         public override string Display()
         {

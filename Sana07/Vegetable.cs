@@ -7,20 +7,28 @@ using System.Threading.Tasks;
 
 namespace PoductLibrary
 {
-    public class Apple : Product
+    public class Vegetable : Product
     {
-        public string Name { get; set; }
-        public int Price { get; set; }
-        public int Count { get; set; }
-        public Apple( string name, int price, int count) {
-        Name= name;
-            Price= price;
-            Count= count;
-        }
 
+        protected string sort;
+        public string Sort
+        {
+            get { return sort; }
+            set
+            {
+                if (value != null)
+                    sort = value;
+                else throw new Exception($"Задайте сорт цього овочу: {name}");
+            }
+        }
+        public Vegetable(string name, string sort, int price, int count) 
+            : base(name, price, count)
+        {
+            this.sort = sort;
+        }
         public override string Display()
         {
-            return $"Назва товару: {Name}; Ціна товару: {Price}; Кількість одиниць товару: {Count};";
+            return $"Назва овочу: {name}; Сорт: {sort} Ціна за одну одиницю: {price}; Кількість данних овочей на складі: {count};";
         }
     }
 }
