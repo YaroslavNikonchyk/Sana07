@@ -15,8 +15,9 @@ namespace PoductLibrary
             {
                 if (product != null && count >= 0 && count <= product.Count)
                 {
-                    for(int i = 0; i < count;i++)
-                    products.Add(product);
+                    for (int i = 0; i < count; i++)
+                        products.Add(product);
+                    product.Count -= count;
                 }
                 else throw new Exception("Неправильно заданий продукт");
             }

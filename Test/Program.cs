@@ -10,7 +10,7 @@ ShoppingCart shoppingCart = new ShoppingCart();
 
 shoppingCart.AddProduct(cucumber, 1);
 shoppingCart.AddProduct(table, 1);
-shoppingCart.AddProduct(phone, 2);
+shoppingCart.AddProduct(phone, 1);
 
 Console.WriteLine(shoppingCart.ProductsInfo());
 Console.WriteLine(shoppingCart.AllProductsSum());
