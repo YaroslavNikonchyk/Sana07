@@ -10,11 +10,12 @@ namespace PoductLibrary
     public class ShoppingCart
     {
         List<Product> products = new List<Product>();
-        public void AddProduct(Product product)
+        public void AddProduct(Product product, int count)
         {
             {
-                if (product != null)
+                if (product != null && count >= 0 && count <= product.Count)
                 {
+                    for(int i = 0; i < count;i++)
                     products.Add(product);
                 }
                 else throw new Exception("Неправильно заданий продукт");
